@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MapView from 'react-native-maps';
 import { Platform, StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
 type Props = {};
@@ -11,9 +12,16 @@ class MapScreen extends Component<Props> {
         const { goBack } = this.props.navigation;
         const { address } = this.props.navigation.state.params;
         return (
-            <View style={styles.container}>
-                <Text>{address}</Text>
-            </View>
+            <MapView
+                style={{ flex: 1 }}
+                region={{
+                    latitude: 44.970611,
+                    longitude: -93.4019067,
+                    latitudeDelta: 0.0922,
+                    longitudeDelta: 0.0421
+                }}
+                showsUserLocation={true}
+            />
         );
     }
 }
