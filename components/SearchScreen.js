@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, TextInput, Button } from 'react-native';
-
-const instructions = Platform.select({
-    ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-    android:
-        'Double tap R on your keyboard to reload,\n' +
-        'Shake or press menu button for dev menu',
-});
+import {
+    Platform,
+    StyleSheet,
+    Text,
+    View,
+    TextInput,
+    Button,
+    KeyboardAvoidingView
+} from 'react-native';
 
 type Props = {};
 class SearchScreen extends Component<Props> {
@@ -18,12 +19,20 @@ class SearchScreen extends Component<Props> {
 
     handleSubmit = () => {
         const { navigate } = this.props.navigation;
-        navigate('MapScreen', { address: this.state.address })
+        navigate('MapScreen', { address: this.state.address });
+    }
+
+    showSavedAddresses = () => {
+        const { navigate } = this.props.navigation;
+        navigate('AddressScreen', {});
     }
 
     render() {
         return (
-            <View style={styles.container}>
+            // KeyboardAvoidingView moves the view up when the keyboard is shown
+            <KeyboardAvoidingView 
+                style={styles.container}
+                behavior="padding">
                 <Text style={styles.welcome}>Enter an Address:</Text>
                 <TextInput
                     style={styles.addressInput}
@@ -34,7 +43,12 @@ class SearchScreen extends Component<Props> {
                     title="Submit"
                     color="#841584"
                     accessibilityLabel="Submit" />
-            </View>
+                <Button
+                    onPress={this.showSavedAddresses}
+                    title="Address Book"
+                    color="#841584"
+                    accessibilityLabel="Address Book" />
+            </KeyboardAvoidingView>
         );
     }
 }
@@ -56,12 +70,6 @@ const styles = StyleSheet.create({
         minWidth: 200,
         borderColor: 'gray',
         borderWidth: 1,
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
         margin: 10,
     },
 });
