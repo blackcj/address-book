@@ -10,11 +10,15 @@ const instructions = Platform.select({
 
 type Props = {};
 class SearchScreen extends Component<Props> {
-    state = { address: '123 Street', search: '' };
+    state = { address: '123 Street' };
+
+    static navigationOptions = {
+        title: 'Search',
+    };
 
     handleSubmit = () => {
-        const searchString = `You entered: ${this.state.address}`;
-        this.setState({ search: searchString });
+        const { navigate } = this.props.navigation;
+        navigate('MapScreen', { address: this.state.address })
     }
 
     render() {
@@ -30,7 +34,6 @@ class SearchScreen extends Component<Props> {
                     title="Submit"
                     color="#841584"
                     accessibilityLabel="Submit" />
-                <Text style={styles.instructions}>{this.state.search}</Text>
             </View>
         );
     }
