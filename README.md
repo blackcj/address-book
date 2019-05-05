@@ -34,9 +34,9 @@ react-native run-android
 react-native run-ios
 ```
 
-### Live Reload
+### Reloading the App
 
-On Android, shake the device forward and backward a couple of times to display the menu. Tap **Reload**.
+On Android, shake the device forward and backward a couple of times to display the menu. Tap **Reload**. Enable **Live Reload** from the menu to automatically update the app when changes are made.
 
 > NOTE: When changing platform specific properties, you will still need to restart the local server.
 
@@ -61,3 +61,7 @@ https://reactnavigation.org/docs/en/getting-started.html#installation
 This library is used to hide environment variables like the Google Maps API key. 
 
 https://github.com/luggit/react-native-config
+
+### React Native Maps
+
+https://github.com/react-native-community/react-native-maps
