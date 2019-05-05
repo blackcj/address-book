@@ -8,7 +8,7 @@ Follow the *React Native CLI Quickstart* prerequisite instructions located [here
 
 ### Environment Variables
 
-Create a file named `.env` and add your Google Maps API key.
+Create a file named `.env` and add your Google Maps API key. Enable **Maps SDK for Android**, **Maps SDK for iOS** and **Geocoding API** for your Google Cloud Project. You *must* enable billing on your Google API key to run more than one geocode request.
 
 ```
 GOOGLE_MAPS_API_KEY=YOUR_KEY_HERE
