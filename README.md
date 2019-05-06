@@ -1,5 +1,7 @@
 # ADDRESS BOOK
 
+React Native application that searches for an address and displays it on a map. Addresses can be saved to a favorites list that can quickly be referenced later.
+
 ![Animated Gif](images/ios_2.gif) ![Android Screenshot](images/android_1.png) ![Android Screenshot](images/android_2.png)
 
 ## Setup
