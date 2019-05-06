@@ -1,6 +1,6 @@
 # ADDRESS BOOK
 
-![Animated Gif](images/demo.gif) ![Android Screenshot](images/android_1.png) ![Android Screenshot](images/android_2.png)
+![Animated Gif](images/demo.gif) ![Android Screenshot](images/android_3.png) ![Android Screenshot](images/android_2.png)
 
 ## Setup
 
