@@ -1,5 +1,7 @@
 # ADDRESS BOOK
 
+![Animated Gif](images/demo.gif) ![Android Screenshot](images/android_1.png) ![Android Screenshot](images/android_2.png)
+
 ## Setup
 
 ### Prerequisites

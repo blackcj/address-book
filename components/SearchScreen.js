@@ -43,6 +43,7 @@ class SearchScreen extends Component<Props> {
                     title="Submit"
                     color="#841584"
                     accessibilityLabel="Submit" />
+                <View style={styles.spacer} />
                 <Button
                     onPress={this.showSavedAddresses}
                     title="Address Book"
@@ -72,6 +73,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         margin: 10,
     },
+    spacer: {
+        height: 20,
+    }
 });
 
 export default SearchScreen;
